@@ -70,9 +70,10 @@ public class Menu {
 					System.out.println("Digite o tempo de Garantia do Fabricante: ");
 					int garantiaFabricante = sc.nextInt();
 					produtos.cadastrar(
-							new ProdutoNovo(produtos.gerarID(), nome, preco, quantidade, tipo, garantiaFabricante));
+					new ProdutoNovo(produtos.gerarID(), nome, preco, quantidade, tipo, garantiaFabricante));
 					break;
 				case 2:
+					sc.nextLine();
 					System.out.println("Digite a duração (Meses/Anos): ");
 					String duracao = sc.nextLine();
 					System.out.println("Digite a quantidade de (Meses/Anos):");
@@ -125,7 +126,7 @@ public class Menu {
 						System.out.println("Digite o tempo de Garantia do Fabricante: ");
 						int garantiaFabricante = sc.nextInt();
 						produtos.atualizar(new ProdutoNovo(id, nome, preco, quantidade, tipo, garantiaFabricante));
-
+						sc.nextLine();
 						break;
 
 					case 2:
