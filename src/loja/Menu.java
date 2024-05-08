@@ -2,6 +2,9 @@ package loja;
 
 import java.util.Scanner;
 
+import loja.model.ProdutoNovo;
+import loja.model.ProdutoUsado;
+
 public class Menu {
 
 	public static void main(String[] args) {
@@ -12,7 +15,7 @@ public class Menu {
 		int opcao;
 		
 		while(true) {
-			
+			System.out.println("                                                     ");
 			System.out.println("-----------------------------------------------------");
 			System.out.println("                    LOJA ONLINE                      ");
 			System.out.println("-----------------------------------------------------");
@@ -40,6 +43,32 @@ public class Menu {
 			switch(opcao) {
 			case 1:
 				System.out.println("Cadastrar Produto\n");
+				System.out.println("Digite o id do Produto: ");
+				int id = sc.nextInt();
+				sc.nextLine();
+				System.out.println("Digite o nome: ");
+				String nome = sc.nextLine();
+				System.out.println("Digte o tipo: (1-Novo/2-Usado)");
+				int tipo = sc.nextInt();
+				System.out.println("Digite o preço: ");
+				float preco = sc.nextFloat();
+				System.out.println("Digte a quantidade: ");
+				int quantidade = sc.nextInt();
+				if(tipo == 1) {
+					System.out.println("Digite o tempo de Garantia do Fabricante: ");
+					int garantiaFabricante = sc.nextInt();
+					ProdutoNovo pn = new ProdutoNovo(id, nome, preco, quantidade, tipo, garantiaFabricante);
+					pn.visualizar();
+
+				}else {
+					System.out.println("Digite a duração (Meses/Anos): ");
+					String duracao = sc.next();
+					System.out.println("Digite a quantidade de (Meses/Anos):");
+					int tempoUso = sc.nextInt();
+					
+					ProdutoUsado pu = new ProdutoUsado(id, nome, preco, quantidade, tipo, duracao, tempoUso);
+					pu.visualizar();
+				}
 				
 				break;
 			case 2:
