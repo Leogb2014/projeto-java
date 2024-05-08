@@ -8,6 +8,7 @@ public abstract class Produto {
 	private int quantidade;
 	private int tipo;
 	
+	
     public Produto(int id, String nome, float preco, int quantidade, int tipo) {
 		this.id = id;
 		this.nome = nome;
@@ -66,18 +67,20 @@ public abstract class Produto {
 			tipo = "Produto Novo";
 			break;
 		case 2:
-			tipo = "Prodtudo Usado";
+			tipo = "Produto Usado";
 			break;
 		}
 		System.out.println("\n\n********************************************");
 		System.out.println("Dados do produto:");
 		System.out.println("***************************************");
+		System.out.println("ID do Produto: " + this.id);
 		System.out.println("Nome: " + this.nome);
 		System.out.println("Tipo do produto: " + tipo);
 		System.out.println("Preco: " + this.preco);
 		System.out.println("Quantidade: " + this.quantidade);
 		
     }
+	
 
 }
 

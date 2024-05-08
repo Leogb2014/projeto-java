@@ -7,9 +7,9 @@ public interface ProdutoRepository {
 	public void procurarPorId(int id);
 	public void listarTodosProdutos();
 	public void cadastrar(Produto produto);
-	public void atualizar(Produto Produto);
+	public void atualizar(Produto produto);
 	public void deletar(int id);
 	
-	public void adicionarAoCarrinho();
+	public void adicionarAoCarrinho(Produto produto);
 
 }

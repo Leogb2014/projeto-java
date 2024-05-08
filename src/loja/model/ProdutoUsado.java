@@ -25,7 +25,8 @@ public class ProdutoUsado extends Produto{
 		super.visualizar();
 		System.out.println("Tempo de Uso do Produto: " + tempoUso + " " + tipoDuracao);
 	}
-	
+
+
 	
 
 }
